@@ -1,0 +1,144 @@
+.hero {
+  padding-top: 224px;
+  overflow: hidden;
+}
+
+.hero-figure-box-06, .hero-figure-box-05{
+  
+  background-color: rgba(44, 43, 43, 0.356)!important;  
+}
+
+#player span {
+  display: block;
+}
+#player .player-info {
+  font-size: 14px;
+}
+
+input.progress {
+  cursor: ew-resize;
+}
+
+input.progress[value] {
+  position: relative;
+  width: 100%;
+  height: 27px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: #0270D7;
+}
+
+input.progress[value]:focus {
+  outline: none;
+}
+
+input.progress[value]:after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+}
+
+input.progress[value]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+
+:root {  
+  --purple: #1bc4ca;
+  --violet: #f5f5f5;
+  --pink: #949494;
+}
+ .hero-paragraph{
+  font-size: medium;
+ }
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from, to {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+h1 {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(2em, 2vw, 4em);
+  font-weight: 400;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 > .magic {
+  display: inline-block;
+  position: relative;
+}
+
+h1 > .magic > .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  
+  animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+h1 > .magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+h1 > .magic > .magic-star > svg > path {
+  fill: var(--violet);
+}
+
+h1 > .magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
